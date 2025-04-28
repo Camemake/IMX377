@@ -1,0 +1,1 @@
+obj-$(CONFIG_VIDEO_IMX377) += imx377.o

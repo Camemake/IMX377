@@ -1,0 +1,32 @@
+
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+/*
+ * Example IMX377 device‑tree snippet
+ */
+
+&i2c3 {
+        imx377: camera@1a {
+                compatible = "sony,imx377";
+                reg = <0x1a>;
+
+                clocks = <&osc 0>;
+                clock-names = "xclk";
+                clock-frequency = <24000000>;
+
+                dvdd-supply = <&reg_1v1_cam>;
+                avdd-supply = <&reg_2v8_cam>;
+                dovdd-supply = <&reg_1v8_cam>;
+
+                reset-gpios = <&gpio1 5 GPIO_ACTIVE_LOW>;
+                pwdn-gpios  = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+
+                port {
+                        imx377_out: endpoint {
+                                remote-endpoint = <&csi_in0>;
+                                data-lanes = <1 2 3 4>;
+                                clock-lanes = <0>;
+                                link-frequencies = /bits/ 64 <576000000>;
+                        };
+                };
+        };
+};

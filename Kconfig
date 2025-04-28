@@ -1,0 +1,9 @@
+
+config VIDEO_IMX377
+        tristate "Sony IMX377 image sensor support (reference)"
+        depends on I2C && VIDEO_V4L2
+        select V4L2_FWNODE
+        select V4L2_ASYNC
+        help
+          This enables support for the Sony IMX377 12‑megapixel CMOS sensor
+          streaming RAW Bayer over MIPI‑CSI‑2.
