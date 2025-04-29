@@ -111,7 +111,7 @@ If colors appear wrong in ISP pipelines, check your Bayer order: the IMX377 is *
 /*
  * Sony IMX377 12‑Mp MIPI CSI‑2 image sensor driver
  *
- * Copyright (c) 2025 Your‑Org
+ * Copyright (c) 2025
  */
 
 #include <linux/module.h>
@@ -248,7 +248,6 @@ module_i2c_driver(imx377_i2c_driver);
 MODULE_DESCRIPTION("Sony IMX377 CMOS Image Sensor driver");
 MODULE_LICENSE("GPL v2");
 ```
-<!--  Further implementation details (pad ops, controls, full register tables) are omitted due to length.  Contributors are invited to complete the TODOs using the datasheet’s register lists (§Register Map) and verified mode timings. -->
 
 ---
 
