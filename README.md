@@ -1,8 +1,5 @@
 # IMX377 Linux V4L2 Driver & Integration Guide
 
-> **Status:** _Initial public drop — ready for compile‑test & community feedback._  
-> **License:** GPL‑2.0  (same as the upstream Linux kernel)
-
 ---
 
 ## 1. Overview
